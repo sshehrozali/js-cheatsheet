@@ -1,0 +1,548 @@
+           <!-- This Cheatsheet includes all the basics and fundamentals of 
+            JS including; variables, constants, primitive data types, reference data types, boolean,
+            operators, conditons, loops, functions and much more. This is generally designed for those
+            people who are completely new to JavaScript like me :p so that they can easily suits them up 
+            to deep dive into the vast world of JavaScript programming. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>JS Tutorial</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Console API
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                Console in JavaScript is basically like a terminal of any other programming language because JavaScript runs under 
+                browser window only so that's why console operates like a terminal for JavaScript.
+                <br><br>
+                <code>
+                    console.warn("This is a warning message!");
+                    <br>
+                    console.error("This is an error message!");
+                    <br>
+                    console.assert(10 == (5+6));
+                </code>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Printing
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                In JavaScript, you can print in three different ways:
+                <br><br>
+                <ul>
+                    <li>Printing on document
+                        <br>
+                        <code>
+                            document.write("Hello World!"); 
+                        </code>
+                    </li>
+                    <br>
+                    <li>Printing on Console
+                        <br>
+                        <code>
+                            console.log("Hello World!");
+                        </code>
+                    </li>
+                    <br>
+                    <li>Printing on browser's prompt window
+                        <br>
+                        <code>
+                            alert("Welcome to my JS tutorial website!");
+                        </code>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Variables
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                You can declare a variable in JavaScript by three different ways:
+                <br><br>
+                <ul>
+                    <li>Using <code>var</code> is something related to old JavaScript. But it will work fine.
+                        <br>
+                    </li>
+                    <li>
+                        Using <code>let</code> is good because it has good memory management. The scope of <code>let</code> is temporary and can only be used within {}. 
+                        <br>
+                    </li>
+                    <li>
+                        <code>const</code> lets you create a constant variable whose value cannot be altered.
+                        <br>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Data Types
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                There are two data types in JavaScript:
+                <br><br>
+                <ol>
+                    <li><strong>Primitive</strong>
+                        <ul>
+                            <br>
+                            <li>String
+                                <br>
+                                <code>
+                                    var str = "I am a String";
+                                    <br>
+                                    console.log(str);
+                                </code>
+                            </li>
+                            <br>
+                            <li>Number
+                                <br>
+                                <code>
+                                    var num = 56;
+                                    <br>
+                                    var deci = 99.99;
+                                    <br>
+                                    console.log(num, deci);
+                                </code>
+                            </li>
+                            <br>
+                            <li>Boolean
+                                <br>
+                                <code>
+                                    var val1 = true;
+                                    <br>
+                                    var val2 = false;
+                                    <br>
+                                    console.log(val1, val2);
+                                </code>
+                            </li>
+                            <br>
+                            <li>Undefined
+                                <br>
+                                <code>
+                                    var undf = undefined;    // Declaring explictly
+                                    <br>
+                                    var undF;
+                                    <br>
+                                    console.log(undf, undF);
+                                </code>
+                            </li>
+                            <br>
+                            <li>Null
+                                <br>
+                                <code>
+                                    var n = null;
+                                    <br>
+                                    console.log(n);
+                                </code>
+                            </li>
+                            <br>
+                            <li>Symbol
+                                <br>
+                                <code>
+                                    Symbol('')  // High level JavaScript
+                                </code>
+                            </li>
+                        </ul>
+                    </li>
+                    <br>
+                    <br>
+                    <li><strong>Reference</strong>
+                        <ul>
+                            <br>
+                            <li>Array
+                                <br>
+                                <code>
+                                    var arr = [1, 2.2, "I Love You"];
+                                    <br>
+                                    console.log("\nARRAY");
+                                    <br>
+                                    console.log(arr, arr[2]);
+                                </code>
+                            </li>
+                            <br>
+                            <li>Object
+                                <br>
+                                <code>
+                                    var phonebook = {
+                                        "Shehroz": 123, 
+                                        "Saad": 789,
+                                        "Sameer": 456
+                                    }
+                                    <br>
+                                    console.log("\nOBJECT");
+                                    <br>
+                                    console.log(phonebook);                                    
+                                </code>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            </div>
+        </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Operators
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                There are four types of operators in JavaScript:
+                <br><br>
+                <ol>
+                    <br>
+                    <li>
+                        <strong>Arthmetic Operators</strong>
+                        <br>
+                        <code>
+                            var a = 99.9;
+                            <br>
+                            var b = 56.56;
+                            <br>
+                            console.log("The value of a + b is", a + b);
+                            <br>
+                            console.log("The value of a - b is", a - b);
+                            <br>
+                            console.log("The value of a * b is", a * b);
+                            <br>
+                            console.log("The value of a / b is", a / b);
+                        </code>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Assignment Operators</strong>
+                        <br>
+                        <code>
+                            var c = a;
+                            <br>
+                            c += b;
+                            <br>
+                            c -= b;
+                            <br>
+                            c *= b;
+                            <br>
+                            c /= b;
+                            <br>
+                            console.log(c);
+                        </code>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Comparison operators</strong>
+                        <br>
+                        <code>
+                            console.log(a > b);
+                            <br>
+                            console.log(a < b);
+                            <br>
+                            console.log(a >= b);
+                            <br>
+                            console.log(a <= b);
+                            <br>
+                            console.log(a != b);
+                        </code>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Logical Operators</strong>
+                        <br>
+                        <ul>
+                            <li>AND
+                                <br>
+                                <code>
+                                    console.log(false && false);
+                                    <br>
+                                    console.log(true && false);
+                                    <br>
+                                    console.log(false && true);
+                                    <br>
+                                    console.log(true && true);
+                                </code>
+                            </li>
+                            <li>OR
+                                <br>
+                                <code>
+                                    console.log(false || false);
+                                    <br>
+                                    console.log(true || false);
+                                    <br>
+                                    console.log(false || true);
+                                    <br>
+                                    console.log(true || true);
+                                </code>
+                            </li>
+                            <li>NOT
+                                <br>
+                                <code>
+                                    console.log(!false);
+                                    <br>
+                                    console.log(!true);
+                                </code>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                Conditions
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                In JavaScript, you can use <code>if</code>, <code>else if</code> and <code>else</code> to execute different conditions.
+                <br>
+                <br>
+                Following example demonstrates the use of using coditions in JavaScript
+                <br>
+                <code>
+                    var a = 10;
+                    <br>
+                    var b = 10;
+                    <br>
+                    console.log("\nValue of a is", a, "\nValue of b is", b, "\nAnswer is ")
+                    <br><br>
+                    if (a == b){
+                        <br>
+                        console.log("Both values are equal!")
+                        <br>
+                    }
+                    <br><br>
+                    else{
+                        <br>
+                        console.log("Both values are not equal!")
+                        <br>
+                    }
+                    <br><br>
+                    if (a < b){
+                        <br>
+                        console.log("Yes! a is less than b");
+                        <br>
+                        if (b > a){
+                        <br>
+                            console.log("Obviously! b is greater than a");
+                            <br>
+                        }
+                        <br>
+                    }
+                    <br><br>
+                    else if (a > b){
+                        <br>
+                        console.log("No a is greater than b")
+                        <br>
+                    }
+                    <br>
+                </code>
+                </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                Loops
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                There are three different types of loops in JavaScript:
+                <br><br>
+                <ol>
+                    <li>
+                        <strong>For Loop</strong>
+                        <br>
+                        <code>
+                            for (var i = 0; i < names.length; i++) {
+                                <br>
+                                console.log(names[i]);
+                                <br>
+                            }
+                        </code>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>While Loop</strong>
+                        <br>
+                        <code>
+                            <br>
+                            let j = 0;
+                            <br>
+                            while (j < names.length) {
+                                <br>
+                                console.log(names[j]);
+                                <br>
+                                j = j + 1
+                                <br>
+                            }
+                        </code>
+                    </li>
+                    <br>
+                    <li>
+                        <strong>Do-While Loop</strong>
+                        <br>
+                        <code>
+                            let k = 0;
+                            <br>
+                            do {
+                                <br>
+                                console.log(names[k]);
+                                <br>
+                                k++;
+                                <br>
+                            }
+                            <br>
+                            while (k < names.length);
+                        </code>
+                    </li>
+                </ol>
+                </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingEight">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                Functions
+              </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                To declare a function in JavaScript, you need to use <code>function</code> keyword along with name of the function and 
+                with n number of parameters or arguements it accepts. Simply use <code>{}</code> to write down inside the function.
+                Use <code>return</code> keyword to return a value from a function.
+                <br><br>
+                Don't forget to call the function with its name when you need to use it. Be sure to pass correct number of arguements!
+                <br><br>
+                Below example helps you demonstrate the correct use of a function in JavaScript
+                <br><br>
+                <code>
+                    function avg(a, b) {
+                        <br>
+                        ans = (a + b) / 2;
+                        <br>
+                        return ans;
+                        <br>
+                    }
+                    <br><br>
+                    c = avg(3, 5);
+                    <br>
+                    console.log("Average of 3 and 5 is", c);
+                </code>
+                </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingNine">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                Array methods
+              </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Following are some of the array methods used in JavaScript:
+                <br><br>
+                <code>
+                    MyArr = [1, 2, 3];
+                </code>
+                <br><br>
+                <ul>
+                    <li>
+                        <code>
+                            MyArr.length;   // Check length of the array
+                        </code>
+                    </li>
+                    <li>
+                        <code>
+                            MyArr.shift();  // Removes first element from the array
+                        </code>
+                    </li>
+                    <li>
+                        <code>
+                            MyArr.pop();    // Removes last item from the array
+                        </code>
+                    </li>
+                    <li>
+                        <code>
+                            MyArr.push(4);  // Adds new item to the array
+                        </code>
+                    </li>
+                    <li>
+                        <code>
+                            MyArr.unshift(0);   // Adds new item at first index of an array
+                        </code>
+                    </li>
+                    <li>
+                        <code>
+                            MyArr.sort()    // Sorts an array (sorts an array alphabetically)
+                        </code>
+                    </li>
+                    <li>
+                        <code>
+                            MyArr.toString()    // Returns an array as a complete string
+                        </code>
+                    </li>
+                </ul>
+                </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTen">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                Misc
+              </button>
+            </h2>
+            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <ul>
+                    <li>
+                        <code>
+                            break   // To terminate the whole loop
+                        </code>
+                    </li>
+                    <li>
+                        <code>
+                            continue    // To skip an iteration
+                        </code>
+                    </li>
+                </ul>
+                </div>
+            </div>
+          </div>
+          <footer style="text-align: center; margin-top: 20px;">
+              Made with ❤️ by <a href="https://github.com/sshehrozali" alt="github username: sshehrozali">Shehroz Ali</a>
+          </footer>
+    <!--JavaScript file-->
+    <script src="index.js"></script>
+</body>
+</html>
